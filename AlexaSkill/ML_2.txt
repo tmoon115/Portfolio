@@ -1,0 +1,3 @@
+Once upon a %n1, there was a %a2 wizard, who always had to %v3  .
+He was on a quest, to defeat a giant %a4 %l5  .
+After the beast was defeated, the wizard began to %v5 all the way home .

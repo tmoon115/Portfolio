@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>UNG Computer Science Club</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+	/*
+	
+	YOU'LL NEED TO KEEP THIS STYLING FOR THE EVENT CARDS TO WORK
+	
+	*/
+	.eventImage{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+	}
+	
+	.eventImageContainer{
+		height: 300px;
+		width: 500px;
+		overflow: hidden;
+		
+	}
+	
+	.eventImageDesc{
+		width: 500px;
+	}
+	
+	</style>
+</head>
+
+<body id="body">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-blue-grey w3-left-align w3-xlarge">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-indigo"><i class="fa fa-desktop w3-margin-right"></i>Logo</a>
+  <a href="#us" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About Us</a>
+  <a href="#members" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Our Members</a>
+  <a href="#upcoming" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Upcoming Activities</a>
+  <a href="#past" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Past Events</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact Us</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-indigo" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Small Navbar for phones/small screen-->
+  <div id="navControl" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#us" class="w3-bar-item w3-button">About Us</a>
+    <a href="#members" class="w3-bar-item w3-button">Our Members</a>
+    <a href="#upcoming" class="w3-bar-item w3-button">Upcoming Activities</a>
+    <a href="#past" class="w3-bar-item w3-button">Past Events</a>
+	<a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Main Image -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="dahlonega.jpg" alt="UNG" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom"> 
+    <button onclick="window.location.href='https://ung.edu/'" class="w3-button w3-large w3-theme w3-hover-indigo" title="Visit UNG.edu">Visit UNG</button>
+  </div>
+  <div class="w3-container w3-display-middle w3-xlarge w3-text-white"><b>Welcome to the UNG Computer Science Club!</b></div>
+</div>
+
+
+
+<!-- About us Section -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="us">
+
+<div class="w3-half">
+<h2>About Us</h2>
+<p>The UNG Computer Science Club is a collection of individuals interested in computer sciences. Our main goal is to bring together UNG students to share perspectives, knowledge, and enthusiasm for computer science. The Computer Science club provides several educational, social,
+		and networking activities each semester for students. Students can collaborate on projects, participate in workshops and seminars, and attend job fairs and networking events.</p>
+<p>The club is open to all students, regardless of major, year, or experience level. We meet every Wednesday in Newton Oakes Center 243 from 5:30 – 7:30 pm for pizza and fun. Come join us!</p>		
+</div>
+
+<div class="w3-half">
+<img src="computerclub.png" alt="Club Logo" style="width:200;min-height:350px;max-height:350px;margin-left:100px;">
+</div>
+
+</div>
+
+<!-- CLUB MEMBERS CONTAINER -->
+	
+	<div id="members"  class="w3-container w3-padding-64 w3-center">
+	<h3>Club Members</h3>
+		<div class="w3-container w3-display-container w3-padding-large ">
+		
+		<!-- LIST OF MEMBERS AS BUTTONS -->
+		
+		<div class="w3-center w3-bar-block w3-light-gray w3-mobile">
+
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'GloriaBlake')">Gloria Blake</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'LydiaSharp')">Lydia Sharp</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'JoseRoss')">Jose Ross</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'LuciaMorrillo')">Lucia Morrillo</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'VictorWoodard')">Victor Woodard</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'NoahTillman')">Noah Tillman</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'TairaShina')">Taira Shina</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'IsaacIllescas')">Isaac Illescas</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'JacobDaniel')">Jacob Daniel</button>
+			<button class="w3-bar-item w3-button tablink w3-mobile" onclick="openInfo(event, 'JulieHopkins')">Julie Hopkins</button>
+		</div>
+		
+		<!-- HIDDEN MEMBER INFO CONTAINERS -->
+		
+	<div class="w3-center w3-mobile" style="">
+
+  <div id="GloriaBlake" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Gloria Blake - President</h2>
+    <div class="w3-container">
+		 <p>Major: Computer Science</p>
+		<p>Year: Junior</p>
+		<p>Favorite CS Topic: Security</p>
+	  </div>
+	</div>
+
+  <div id="LydiaSharp" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Lydia Sharp - Vice President</h2>
+    <div class="w3-container">
+		 <p>Major: Computer Science</p>
+		<p>Year: Sophomore</p>
+		<p>Favorite CS Topic: Architecture and Organization</p>
+	  </div>
+	</div>
+
+  <div id="JoseRoss" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Jose Ross - Secretary</h2>
+	<div class="w3-container">
+		 <p>Major: Computer Information Security</p>
+		<p>Year: Senior</p>
+		<p>Favorite CS Topic: Human-Computer Interface</p>
+	  </div>
+	</div>
+  
+  <div id="LuciaMorrillo" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Lucia Morrillo - Communication Chair</h2>
+	  <div class="w3-container">
+		 <p>Major: Computer Science</p>
+		<p>Year: Senior</p>
+		<p>Favorite CS Topic: Encryption</p>
+	  </div>
+	</div>
+  
+  <div id="VictorWoodard" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Victor Woodard - Treasurer</h2>
+	<div class="w3-container">
+		 <p>Major: Journalism</p>
+		<p>Year: Freshman</p>
+		<p>Favorite CS Topic: Web Design</p>
+	  </div>
+	</div>
+  
+  <div id="NoahTillman" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Noah Tillman</h2>
+	<div class="w3-container">
+		 <p>Major: History</p>
+		<p>Year: Sophomore</p>
+		<p>Favorite CS Topic: Programming</p>
+	  </div>
+	</div>
+  
+  <div id="TairaShina" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Taira Shina</h2>
+	<div class="w3-container">
+		 <p>Major: Computer Science</p>
+		<p>Year: Junior</p>
+		<p>Favorite CS Topic: Programming</p>
+	  </div>
+	</div>
+  
+  <div id="IsaacIllescas" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Isaac Illescas</h2>
+	<div class="w3-container">
+		 <p>Major: Math</p>
+		<p>Year: Senior</p>
+		<p>Favorite CS Topic: Machine Learning</p>
+	  </div>
+	</div>
+  
+  <div id="JacobDaniel" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Jacob Daniel</h2>
+	<div class="w3-container">
+		 <p>Major: Computer Science</p>
+		<p>Year: Senior</p>
+		<p>Favorite CS Topic: Software Engineering</p>
+	  </div>
+	</div>
+  
+    <div id="JulieHopkins" class="w3-container member w3-animate-right" style="display:none">
+    <h2>Julie Hopkins</h2>
+	<div class="w3-container">
+		 <p>Major: Psychology</p>
+		<p>Year: Sophomore</p>
+		<p>Favorite CS Topic: Programming Languages</p>
+
+	  </div>
+	</div>
+</div>
+</div>
+
+<!-- UPCOMING ACTIVITIES CONTAINER -->
+	
+	<h3 id="upcoming" class="w3-border-top w3-padding-16">Upcoming Activities</h3>
+	<div class="w3-container" style="overflow: scroll">
+	
+	<!-- TECH ASSISTANCE CARD -->
+	
+	<div class="w3-padding w3-cell w3-mobile">
+		<div class="w3-display-container w3-container  w3-card-4 w3-round-medium">
+		<div class="w3-display-container eventImageContainer w3-mobile w3-margin-top">
+		  <img src="images/techassistance.jpg" alt="Two women working on a computer" class="w3-round-small eventImage" style=""/>
+	
+			<h4 class="w3-display-bottomleft w3-dark-gray w3-container w3-bar w3-padding w3-round-small" style="margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0;">Technology Assistance</h4></div>
+			
+		  <p class="w3-container eventImageDesc w3-mobile" style="">We hold monthly Technology Assistance Sessions at the Library Technology Center on Dahlonega campus on the last Monday of every month.<br/>
+				If you're struggling with a piece of software or technology or would like to help someone understand their technology, please come join us.</p>
+	  </div>
+		</div>
+		
+		<!-- PROJECT WORKDAYS CARD -->
+		
+		<div class="w3-padding w3-cell w3-mobile">
+		<div class="w3-display-container w3-container  w3-card-4 w3-round-medium">
+		<div class="w3-display-container eventImageContainer w3-mobile w3-margin-top">
+		  <img src="images/projectworkdays.jpg" alt="Group of Students Sitting Together and Discussing Computer Science" class="w3-round-small eventImage" style=""/>
+	
+			<h4 class="w3-display-bottomleft w3-dark-gray w3-container w3-bar w3-padding w3-round-small" style="margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0;">Project Workdays</h4></div>
+			
+		  <p class="w3-container eventImageDesc w3-mobile">Every second Wednesday of the month we hold a project workday. Students are encouraged to bring any personal projects they like and work on them with support from the group. These meetings are a good time for collaborating and helping each other with challenging subjects. Even if you've never touched computer science before, we can help you find a fun, accessible project that can get you started.</p>
+	  </div>
+	  </div>
+	  
+	  <!-- MOVIE NIGHT CARD -->
+	  
+	  <div class="w3-padding w3-cell w3-mobile">
+		<div class="w3-display-container w3-container  w3-card-4 w3-round-medium">
+		<div class="w3-display-container eventImageContainer w3-mobile w3-margin-top">
+		  <img src="images/movie_night.jpeg" alt="Theatre with Red Curtain" class=" w3-round-small eventImage" style=""/>
+	
+			<h4 class="w3-display-bottomleft w3-dark-gray w3-container w3-bar w3-padding w3-round-small" style="margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0;">Movie Nights</h4></div>
+			
+		  <p class="w3-container eventImageDesc w3-mobile">Held about once every two months at UNGCS meetings, we take a break from the computer science and watch a fun movie together. Come join us for a fun group outing. 
+		  <br/>Our next movie night will be 10/31 for a fun Halloween night out!</p>
+
+	  </div>
+	</div>
+	  
+	</div>
+	
+<!-- PAST EVENTS CONTAINER -->
+	
+<h3 class=" w3-margin-top w3-border-top w3-padding-16" id="past">Past Events</h3>
+	<div class="w3-container w3-margin-bottom" style="overflow: scroll">
+		
+		<!-- PRESENTATION DAYS CARD -->
+		
+		<div class="w3-padding w3-cell w3-mobile">
+		<div class="w3-display-container w3-container  w3-card-4 w3-round-medium">
+		<div class="w3-display-container eventImageContainer w3-mobile w3-margin-top">
+		  <img src="images/presentationday.jpg" alt="Man Presenting to a Group" class="w3-round-small eventImage" style=""/>
+	
+			<h4 class="w3-display-bottomleft w3-dark-gray w3-container w3-bar w3-padding w3-round-small" style="margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0;">Presentation Days</h4></div>
+			
+		  <p class="w3-container eventImageDesc w3-mobile">On September 5th we held the second annual UNG CS Presentation Conference where students, professors, and guest speakers gathered to discuss topics in Computer Science. Students presented their research and learned about each other’s projects as well as had the opportunity to hear guest speakers and professors give talks on their concentration.</p>
+		</div>
+		</div>
+		
+		<!-- PORTFOLIO WORKSHOP CARD -->
+		
+		<div class="w3-padding w3-cell w3-mobile">
+		<div class="w3-display-container w3-container  w3-card-4 w3-round-medium ">
+		<div class="w3-display-container eventImageContainer w3-mobile w3-margin-top">
+		  <img src="images/portfolioday.jpeg" alt="Two women working on a computer" class="w3-round-small eventImage" style=""/>
+	
+			<h4 class="w3-display-bottomleft w3-dark-gray w3-container w3-bar w3-padding w3-round-small" style="margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0;">Portfolio Workshop</h4></div>
+			
+		  <p class="w3-container eventImageDesc w3-mobile">A semester tradition, the UNG CS Club holds a day long portfolio creating workshop. For a field that is constantly growing, there's a lot of competition out there. During our portfolio workshop students can come learn about platforms and tools for promoting their personal brand and creating a portfolio of work that they can show to future employers.</p>
+		</div>
+		</div>
+		
+		<!-- COOKOUT CARD -->
+		
+		<div class="w3-padding w3-cell w3-mobile">
+		<div class="w3-display-container w3-container w3-card-4 w3-round-medium">
+			<div class="w3-display-container eventImageContainer w3-mobile w3-margin-top" style="">
+		  <img src="images/cookout.jpeg" alt="Cookout on Beach" class="w3-round-small eventImage" style=""/>
+	
+			<h4 class="w3-display-bottomleft w3-dark-gray w3-container w3-bar w3-padding w3-round-small" style="margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0;">CS Club Cookout</h4></div>
+			
+		  <p class="w3-container eventImageDesc w3-mobile">Everyone needs to let of some steam. At the end of each spring semester we hold a cookout on the banks of Lake Lanier where we relax and have fun together as finals approach and the weather improves.</p>
+		</div>
+		</div>
+		
+		<!-- CAREER FAIR CARD -->
+		
+		<div class="w3-padding w3-cell w3-mobile">
+		<div class="w3-display-container w3-container  w3-card-4 w3-round-medium">
+		<div class="w3-display-container eventImageContainer w3-mobile w3-margin-top">
+		  <img src="images/careerandinternshipfair.jpeg" alt="Man Giving Presentation to Students Next to a Screen" class="w3-round-small eventImage" style=""/>
+	
+			<h4 class="w3-display-bottomleft w3-dark-gray w3-container w3-bar w3-padding w3-round-small" style="margin-bottom: 0; border-top-left-radius: 0; border-top-right-radius: 0;">CS Career and Internship Fair</h4></div>
+			
+		  <p class="w3-container eventImageDesc w3-mobile"> The Computer Science Career and Internship Fair welcomed many employers and students this year. Like any career fair, networking opportunities and potential employment offers abound. Join us again next year to meet representatives from some of the top tech companies around.</p>
+		</div>
+		</div>
+	</div>
+
+
+<!-- Request to join/ Contact info Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-indigo w3-bottombar">Contact Us</span></div>
+      <h3>Attend One of Our Meetings!</h3>
+      <p>Location</p>
+      <p><i class="fa fa-map-marker w3-text-indigo w3-xlarge"></i>  Newton Oakes Center Room 243 from 5:30 – 7:30 pm every Wednesday</p>
+      <p><i class="fa fa-phone w3-text-indigo w3-xlarge"></i> (123)456-7890</p>
+      <p><i class="fa fa-envelope-o w3-text-indigo w3-xlarge"></i>  ungcsclub@ung.edu</p>
+    </div>
+    <div class="w3-col m7">
+      <h3>Request to Join Online!</h3>
+      <form class="w3-container w3-card-4 w3-padding-13 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>Recieve Notifications for Scheduled Meetings</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us On Social Media</h4>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-indigo w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  
+  <h4 class="w3-margin w3-cell-row"><a href="#wrapper">UNG CS Club</a></h4>
+		<div class="w3-cell-row  w3-mobile" style="width: 80%; margin: 0 auto">
+		<a href="#us" class="w3-hover-gray w3-padding-large w3-cell w3-mobile">About Us</a>
+		<a href="#members" class="w3-hover-gray w3-padding-large w3-cell w3-mobile">Members</a>
+		<a href="#upcoming" class="w3-hover-gray w3-padding-large w3-cell w3-mobile">Upcoming Activities</a>
+		<a href="#past" class="w3-hover-gray w3-padding-large w3-cell w3-mobile">Past Events</a>
+		<a href="#contact" class="w3-hover-gray w3-padding-large w3-cell w3-mobile">Contact Us</a>
+		</div>
+		
+		<p class=" w3-padding-small">&copy; UNG CS Club 2018</p>
+		
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-indigo w3-hide-small">Back To Top</span>   
+    <a class="w3-button w3-theme" href="#body"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+
+<script>
+// This toggles the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navControl");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+<!-- SCRIPT FOR MAKING EACH MEMBER'S INFO APPEAR AND COLORING THEIR BUTTON TO SHOW CURRENT SELECTION -->
+function openInfo(evt, memberName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("member");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace("w3-dark-gray", ""); 
+  }
+  document.getElementById(memberName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-gray";
+}
+</script>
+
+</body>
+</html>
